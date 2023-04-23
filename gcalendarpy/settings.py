@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-t=gfl6b6%d8(wdkxiq@4@))fokt@yyhn#%_$7flwbsm+1ao2po
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['gcalendar-django.navaneeths1998.repl.co']
 
 
 # Application definition
