@@ -30,7 +30,7 @@ class GoogleCalendarInitView(View):
         # for the OAuth 2.0 client, which you configured in the API Console. If this
         # value doesn't match an authorized URI, you will get a 'redirect_uri_mismatch'
         # error.
-        flow.redirect_uri = 'https://154896ee-3312-4e03-9535-bb5864c7f389.id.repl.co//rest/v1/calendar/redirect'
+        flow.redirect_uri = 'https://154896ee-3312-4e03-9535-bb5864c7f389.id.repl.co/rest/v1/calendar/redirect'
 
         authorization_url, state = flow.authorization_url(
             # Enable offline access so that you can refresh an access token without
