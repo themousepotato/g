@@ -11,7 +11,7 @@ import os
 # *DO NOT* leave this option enabled in production.
 os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = '1'
 
-SECRETS_FILE = 'https://www.dropbox.com/s/cq30cqewa6d7tae/client_secret.json?dl=1'
+SECRETS_FILE = os.path.join(os.getcwd(), 'gcalendarpy/client_secret.json')
 
 
 class GoogleCalendarInitView(View):
@@ -30,7 +30,7 @@ class GoogleCalendarInitView(View):
         # for the OAuth 2.0 client, which you configured in the API Console. If this
         # value doesn't match an authorized URI, you will get a 'redirect_uri_mismatch'
         # error.
-        flow.redirect_uri = 'https://154896ee-3312-4e03-9535-bb5864c7f389.id.repl.co/rest/v1/calendar/redirect'
+        flow.redirect_uri = 'https://154896ee-3312-4e03-9535-bb5864c7f389.id.repl.co//rest/v1/calendar/redirect'
 
         authorization_url, state = flow.authorization_url(
             # Enable offline access so that you can refresh an access token without
