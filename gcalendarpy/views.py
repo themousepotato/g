@@ -30,7 +30,7 @@ class GoogleCalendarInitView(View):
         # for the OAuth 2.0 client, which you configured in the API Console. If this
         # value doesn't match an authorized URI, you will get a 'redirect_uri_mismatch'
         # error.
-        flow.redirect_uri = 'http://127.0.0.1:8000/rest/v1/calendar/redirect'
+        flow.redirect_uri = 'https://gcalendar-django.navaneeths1998.repl.co/rest/v1/calendar/redirect'
 
         authorization_url, state = flow.authorization_url(
             # Enable offline access so that you can refresh an access token without
@@ -65,7 +65,7 @@ class GoogleCalendarRedirectView(View):
             scopes=['https://www.googleapis.com/auth/calendar.events'],
             state=state
         )
-        flow.redirect_uri = 'http://127.0.0.1:8000/rest/v1/calendar/redirect'
+        flow.redirect_uri = 'https://gcalendar-django.navaneeths1998.repl.co/rest/v1/calendar/redirect'
 
         # Use the authorization server's response to fetch the OAuth 2.0 tokens.
         authorization_response = request.build_absolute_uri()
@@ -85,7 +85,7 @@ class GoogleCalendarRedirectView(View):
 
         # Fetching of events is done in a separate view.
         # Here we just redirect to the events view.
-        return redirect('http://127.0.0.1:8000/rest/v1/calendar/events')
+        return redirect('https://gcalendar-django.navaneeths1998.repl.co/rest/v1/calendar/events')
 
 
 class GoogleCalendarEventsView(View):
